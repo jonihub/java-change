@@ -3,8 +3,17 @@
 public class Change {
     public static void main(String[] args) {
 
-        int value = 29;
+        int value = 1209019;
         
+        int hundreds = value / 10000;
+        value = value % 10000;
+
+        int twenties = value / 2000;
+        value = value % 2000;
+
+        int tens = value / 500;
+        value = value % 1000;
+
         int fives = value / 500;
         value = value % 500;
 
@@ -22,7 +31,10 @@ public class Change {
 
         int penny = value;
 
-        String output = "Your amount " + value + "consists of: \n" + 
+        String output = "Your amount " + value + " consists of: \n" + 
+        "\t" + hundreds + " hundred dollars\n" +
+        "\t" + twenties + " twenty dollars\n" +
+        "\t" + tens + " ten dollars\n" +
         "\t" + fives + " five dollars\n" +
         "\t" + ones + " one dollars\n" +
         "\t" + quarters + " quarters\n" +
