@@ -13,8 +13,9 @@ public class Change {
         Scanner sc = new Scanner(System.in);
         double money = sc.nextDouble();
 
+        // Convert user input to cents
         int value = (int) (money * 100);
-        
+    
         // Check number of $100s
         int hundreds = value / 10000;
         value = value % 10000;
