@@ -17,7 +17,7 @@ public class Change {
        
         // Convert user input to cents
         int value = (int) (money * 100);
-        // Determine how many of each denomination are required
+        // Determine how many coins are required
         int[] count = coin_calc(coins, value);
 
         // Display the results
@@ -37,10 +37,10 @@ public class Change {
     static int[] coin_calc(int[] coins, int amount) {
         
         int[] count = new int[coins.length];
-        // Loop through each denomination (starting at largest)
+        // Loop through each value (starting at largest)
         for (int i = 0; i < coins.length; i++) {
             
-            // Use one of that denomination until we need something smaller
+            // Use one value at a time, and return count
             while (amount >= coins[i]) {
                 count[i]++;
                 amount -= coins[i];
