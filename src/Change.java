@@ -30,7 +30,6 @@ public class Change {
                 System.out.println("\t" + count[i] + " - " + coins[i] + " cent(s)");
             }
          }
-
          sc.close();
     }
 
