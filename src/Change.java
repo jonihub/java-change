@@ -15,10 +15,10 @@ public class Change {
         Scanner sc = new Scanner(System.in);
         double money = sc.nextDouble();
        
-        // Convert user input to cents
+        // Convert user input to coins
         int value = (int) (money * 100);
         // Determine how many coins are required
-        int[] count = coin_calc(coins, value);
+        int[] count = coinCalculator(coins, value);
 
         // Display the results
         System.out.println("Your amount $" + money + " consists of " + value + " coin(s).");
@@ -33,7 +33,7 @@ public class Change {
          sc.close();
     }
 
-    static int[] coin_calc(int[] coins, int amount) {
+    static int[] coinCalculator(int[] coins, int amount) {
         
         int[] count = new int[coins.length];
         // Loop through each value (starting at largest)
